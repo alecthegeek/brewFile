@@ -1,10 +1,15 @@
 #! /usr/bin/env bash
 
-xcode-select --install
+# Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
+xcode-select --install # Works on Mavericks and hopfully above
+
+echo
 read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
 
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+#Synlink into the normal place. Add this to login scripts as well
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew tap caskroom/cask
@@ -13,7 +18,7 @@ brew tap caskroom/versions
 brew install brew-cask
 
 brew cask install java
-brew cask install xquartz
+brew cask install xquartz #Pre-req for some of the brew packages
 
 brew install python --framework
 brew install putty gtk+
@@ -78,6 +83,7 @@ brew cask install google-drive
 brew cask install gpgtools
 brew cask install hipchat
 brew cask install iterm2
+brew cask install jdiskreport
 brew cask install kdiff3
 brew cask install keepassx0
 brew cask install kindle
