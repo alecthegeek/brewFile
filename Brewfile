@@ -108,6 +108,7 @@ brew cask install thunderbird
 brew cask install transmission
 brew cask install truecrypt71a
 brew cask install unrarx
+brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install vmware-fusion
