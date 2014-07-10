@@ -84,6 +84,7 @@ brew cask install gpgtools
 brew cask install hipchat
 brew cask install iterm2
 brew cask install jdiskreport
+brew cask install jewelrybox
 brew cask install kdiff3
 brew cask install keepassx0
 brew cask install kindle
@@ -115,3 +116,14 @@ brew cask install vmware-fusion
 
 brew cleanup
 brew cask cleanup
+
+# Install Perlbrew
+
+sudo cpan App::perlbrew
+perlbrew init
+source $HOME/perl5/perlbrew/etc/bashrc
+perlbrew install perl-stable
+perlbrew install-cpanm
+cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+# cpanm install CPAN::Mini
+# minicpan -l ~/perl5/minicpan -r http://mirror.internode.on.net/pub/cpan/
