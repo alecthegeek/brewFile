@@ -98,6 +98,7 @@ brew cask install openscad
 brew cask install paintbrush
 brew cask install quicksilver
 brew cask install second-life-viewer
+brew cask install sketchup
 brew cask install skype
 brew cask install slic3r
 brew cask install smcfancontrol
