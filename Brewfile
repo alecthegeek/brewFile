@@ -128,3 +128,9 @@ perlbrew install-cpanm
 cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 # cpanm install CPAN::Mini
 # minicpan -l ~/perl5/minicpan -r http://mirror.internode.on.net/pub/cpan/
+
+
+# Install keybase client (keybase.io)
+
+npm install -g keybase-installer
+
