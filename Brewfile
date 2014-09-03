@@ -146,4 +146,5 @@ direnv allow $GOPATH
 cd "$GOPATH""
 go get github.com/golang/lint/golint
 go get github.com/tools/godep
+go get code.google.com/p/go.tools/cmd/goimports
 echo Please add \"$GOBIN\" to your path
