@@ -134,3 +134,16 @@ cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mloca
 
 npm install -g keybase-installer
 
+
+#  Add local golang tools directory
+
+export GOPATH=/usr/local/gotools
+export GOBIN="$GOPATH/bin"
+mkdir "$GOPATH"
+echo "export GOPATH=\"\$PWD\"" >  $GOPATH/.envrc
+echo "export GOBIN=\"\$PWD/bin\"" >>  $GOPATH/.envrc
+direnv allow $GOPATH
+cd "$GOPATH""
+go get github.com/golang/lint/golint
+go get github.com/tools/godep
+echo Please add \"$GOBIN\" to your path
