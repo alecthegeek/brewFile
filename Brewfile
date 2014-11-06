@@ -7,9 +7,9 @@ xcode-select --install # Works on Mavericks and hopfully above
 echo
 read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
 
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#Synlink into the normal place. Add this to login scripts as well
+#Symlink into the normal place. Add this to login scripts as well
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew tap caskroom/cask
@@ -84,7 +84,7 @@ brew cask install gpgtools
 brew cask install hipchat
 brew cask install iterm2
 brew cask install jdiskreport
-brew cask install jewelrybox
+#brew cask install jewelrybox
 brew cask install kdiff3
 brew cask install keepassx0
 brew cask install kindle
@@ -113,7 +113,7 @@ brew cask install unrarx
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
-brew cask install vmware-fusion
+# brew cask install vmware-fusion
 
 brew cleanup
 brew cask cleanup
