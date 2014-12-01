@@ -45,13 +45,11 @@ brew install mutt
 brew install node
 brew install offline-imap
 brew install p7zip
-brew install rhino
 brew install sqlite
 brew install ssh-copy-id
 brew install svn
 brew install the_silver_searcher
 brew install tmux
-brew install wget
 brew install wget
 brew install wine
 brew install winetricks
@@ -83,7 +81,6 @@ brew cask install google-drive
 brew cask install gpgtools
 brew cask install iterm2
 brew cask install jdiskreport
-#brew cask install jewelrybox
 brew cask install kdiff3
 brew cask install keepassx0
 brew cask install kindle
