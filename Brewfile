@@ -1,5 +1,11 @@
 #! /usr/bin/env bash
 
+sudo nvram SystemAudioVolume=" "
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+
+
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
 xcode-select --install # Works on Mavericks and hopfully above
