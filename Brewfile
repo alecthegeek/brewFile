@@ -79,6 +79,7 @@ brew cask install filezilla
 brew cask install flash
 brew cask install flip4mac
 brew cask install flux
+brew cask install freeplane
 brew cask install fritzing
 brew cask install gimp
 brew cask install gnucash
