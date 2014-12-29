@@ -44,7 +44,7 @@ brew install ispell
 brew install jdiskreport
 brew install kdiff3
 brew install lua52
-brew install mercurial
+#brew install mercurial
 brew install minicom
 brew install multimarkdown
 brew install mutt
@@ -140,14 +140,14 @@ npm install -g keybase-installer
 
 #  Add local golang tools directory
 
-export GOPATH=/usr/local/gotools
-export GOBIN="$GOPATH/bin"
-mkdir "$GOPATH"
-echo "export GOPATH=\"\$PWD\"" >  $GOPATH/.envrc
-echo "export GOBIN=\"\$PWD/bin\"" >>  $GOPATH/.envrc
-direnv allow $GOPATH
-cd "$GOPATH""
-go get github.com/golang/lint/golint
-go get github.com/tools/godep
-go get code.google.com/p/go.tools/cmd/goimports
-echo Please add \"$GOBIN\" to your path
+#export GOPATH=/usr/local/gotools
+#export GOBIN="$GOPATH/bin"
+#mkdir "$GOPATH"
+#echo "export GOPATH=\"\$PWD\"" >  $GOPATH/.envrc
+#echo "export GOBIN=\"\$PWD/bin\"" >>  $GOPATH/.envrc
+#direnv allow $GOPATH
+#cd "$GOPATH""
+#go get github.com/golang/lint/golint
+#go get github.com/tools/godep
+#go get code.google.com/p/go.tools/cmd/goimports
+#echo Please add \"$GOBIN\" to your path
