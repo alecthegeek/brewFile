@@ -6,6 +6,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 sudo nvram SystemAudioVolume=" "
 
 
+# I'd suggest running this script under a different acconnt to your normal account. Otherwise
+# TimeMachine will will assume you own the brew install and will restore it when you use the
+# Data Migration tool
+
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
 xcode-select --install # Works on Mavericks and hopfully above
@@ -33,6 +37,7 @@ brew install ack
 brew install byacc
 brew install cabextract
 brew install coreutils
+brew install direnv
 brew install findutils
 brew install flex
 brew install gawk
@@ -44,7 +49,6 @@ brew install ispell
 brew install jdiskreport
 brew install kdiff3
 brew install lua52
-#brew install mercurial
 brew install minicom
 brew install multimarkdown
 brew install mutt
@@ -90,8 +94,6 @@ brew cask install iterm2
 brew cask install jdiskreport
 brew cask install kdiff3
 brew cask install keepassx0
-brew cask install kindle
-brew cask install legacy-keepassx
 brew cask install libreoffice
 brew cask install mactex
 brew cask install macvim
