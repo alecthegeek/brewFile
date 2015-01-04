@@ -34,6 +34,9 @@ brew install python --framework
 brew install putty gtk+
 
 brew install ack
+brew install bfg
+cd $(brew --prefix)/bin
+ln -s bfg git-bfg
 brew install byacc
 brew install cabextract
 brew install coreutils
