@@ -12,7 +12,8 @@ sudo nvram SystemAudioVolume=" "
 
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
-xcode-select --install # Works on Mavericks and hopfully above
+#Xcode cli now installed by homebrew I'm told
+#xcode-select --install # Works on Mavericks and hopfully above
 
 echo
 read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
@@ -31,7 +32,7 @@ brew cask install java
 brew cask install xquartz #Pre-req for some of the brew packages
 
 brew install python --framework
-brew install putty gtk+
+brew install putty --with-gtk+
 
 brew install ack
 brew install bfg
