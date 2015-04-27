@@ -55,6 +55,8 @@ brew install kdiff3
 brew install lua52
 brew install minicom
 brew install mvim
+#sudo -u admin ln -s /usr/local/Cellar/macvim/7.4-74/bin/mvim /usr/local/Cellar/macvim/7.4-74/bin/vim
+#udo -u admin ln -s /usr/local/Cellar/macvim/7.4-74/bin/vim /usr/local/bin/vim
 brew install multimarkdown
 brew install mutt
 brew install node
