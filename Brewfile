@@ -54,6 +54,7 @@ brew install jdiskreport
 brew install kdiff3
 brew install lua52
 brew install minicom
+brew install mvim
 brew install multimarkdown
 brew install mutt
 brew install node
@@ -100,7 +101,7 @@ brew cask install kdiff3
 brew cask install keepassx0
 brew cask install libreoffice
 brew cask install mactex
-brew cask install macvim
+# brew cask install macvim # Don't install this. It breaks
 brew cask install minecraft
 brew cask install music-manager
 brew cask install openscad
