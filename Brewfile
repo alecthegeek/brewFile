@@ -3,7 +3,8 @@
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%80
 
 
 # I'd suggest running this script under a different acconnt to your normal account. Otherwise
