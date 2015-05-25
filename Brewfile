@@ -56,8 +56,17 @@ brew install kdiff3
 brew install lua52
 brew install minicom
 brew install macvim
-#sudo -u admin ln -s /usr/local/Cellar/macvim/7.4-74/bin/mvim /usr/local/Cellar/macvim/7.4-74/bin/vim
-#udo -u admin ln -s /usr/local/Cellar/macvim/7.4-74/bin/vim /usr/local/bin/vim
+version=$(ls -1r /usr/local/Cellar/macvim/ | head -1)
+
+for i in  $(ls /usr/local/Cellar/macvim/$version/bin|grep -v mvim)  ; do
+
+    [[ -f /usr/local/bin/${i##*/} ]] && sudo rm /usr/local/bin/${i##*/}  
+    sudo -u admin ln -s /usr/local/Cellar/macvim/$version/bin/mvim /usr/local/bin/${i##*/}
+    
+done 
+[[ -d /Applications/MacVim.app ]] sudo rm -rf /Applications/MacVim.app
+sudo -u admin ln -s /usr/local/Cellar/macvim/$version/MacVim.app /Applications/MacVim.app
+
 brew install multimarkdown
 brew install mutt
 brew install node
