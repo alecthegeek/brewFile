@@ -56,16 +56,21 @@ brew install kdiff3
 brew install lua52
 brew install minicom
 brew install macvim
+
 version=$(ls -1r /usr/local/Cellar/macvim/ | head -1)
 
 for i in  $(ls /usr/local/Cellar/macvim/$version/bin|grep -v mvim)  ; do
 
-    [[ -f /usr/local/bin/${i##*/} ]] && sudo rm /usr/local/bin/${i##*/}  
+    [[ -L /usr/local/bin/${i##*/} ]] && sudo rm /usr/local/bin/${i##*/}  
     sudo -u admin ln -s /usr/local/Cellar/macvim/$version/bin/mvim /usr/local/bin/${i##*/}
-    
 done 
-[[ -d /Applications/MacVim.app ]] sudo rm -rf /Applications/MacVim.app
+
+[[ -d /Applications/MacVim.app ]] && sudo rm -rf /Applications/MacVim.app
 sudo -u admin ln -s /usr/local/Cellar/macvim/$version/MacVim.app /Applications/MacVim.app
+
+for i in  $(ls /usr/local/Cellar/macvim/$version/bin|grep -v mvim)  ; do
+    ls -l /usr/local/bin/${i##*/}
+done
 
 brew install multimarkdown
 brew install mutt
