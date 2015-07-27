@@ -33,6 +33,7 @@ brew cask install java
 brew cask install xquartz #Pre-req for some of the brew packages
 
 brew install python --framework
+brew linkapps python
 brew install putty --with-gtk+
 
 brew install ack
