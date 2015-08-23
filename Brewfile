@@ -78,6 +78,7 @@ brew install mutt
 brew install node
 brew install offline-imap
 brew install p7zip
+brew install pandoc
 brew install sqlite
 brew install ssh-copy-id
 brew install svn
