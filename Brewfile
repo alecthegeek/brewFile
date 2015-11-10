@@ -6,6 +6,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # sudo nvram SystemAudioVolume=" "
 sudo nvram SystemAudioVolume=%80
 
+# Prevent Gatekeeper Turning Back On Automatically in OS X
+# http://osxdaily.com/2015/11/05/stop-gatekeeper-auto-rearm-mac-os-x/
+sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool NO
+
 
 # I'd suggest running this script under a different acconnt to your normal account. Otherwise
 # TimeMachine will will assume you own the brew install and will restore it when you use the
