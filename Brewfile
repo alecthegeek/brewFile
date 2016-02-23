@@ -119,6 +119,7 @@ brew cask install google-chrome
 brew cask install google-drive
 brew cask install gpgtools
 brew cask install iterm2
+brew cask install itsycal
 brew cask install jdiskreport
 brew cask install kdiff3
 brew cask install keepassx0
