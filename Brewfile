@@ -46,6 +46,7 @@ cd $(brew --prefix)/bin
 ln -s bfg git-bfg
 brew install byacc
 brew install cabextract
+brew install cmake
 brew install coreutils
 brew install direnv
 brew install findutils
