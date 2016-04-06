@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# A wrapper for the the brew command.
+
+# Why? So that it use a GitHib API Token and runs under a different user account
+
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.brew)
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+export BREW_APP_OWNER=admin
+
+# BREW_CMD=$(brew --prefix)/bin/brew
+BREW_CMD=/usr/local/bin/brew
+
+[[ $1 =~ cask ]] && cask=$1 && shift
+
+if [[ $1 =~ upgrade || $1 =~ update || $1 =~ install || $1 =~ remove || $1 =~ zap || $1 =~ clean || $1 =~ link || $1 =~ prune || $1 =~ doctor || $1 =~ tap && -n $2 ]] ; then
+  echo export HOMEBREW_GITHUB_API_TOKEN=$HOMEBREW_GITHUB_API_TOKEN\;export HOMEBREW_CASK_OPTS=\"$HOMEBREW_CASK_OPTS\"\;$BREW_CMD $cask "$@" | sudo -iu $BREW_APP_OWNER
+else
+  $BREW_CMD $cask "$@"
+fi
+
