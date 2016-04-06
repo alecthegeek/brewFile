@@ -15,13 +15,11 @@ sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool NO
 # TimeMachine will will assume you own the brew install and will restore it when you use the
 # Data Migration tool
 
-# Install Apple CLI Dev tools, java and my preferred homebrew and cask software
+# Install Apple Dev tools, java and my preferred homebrew and cask software
 
-#Xcode cli now installed by homebrew I'm told
-#xcode-select --install # Works on Mavericks and hopfully above
 
-echo
-read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
+echo "About to install Dev Tools if needed. Please note that Xcode is required for"
+read -p "packages such as Open SSL and MacVim. Press enter to continue" < /dev/tty
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -30,8 +28,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew tap caskroom/cask
 brew tap caskroom/versions
-
-brew install brew-cask
 
 brew cask install java
 brew cask install xquartz #Pre-req for some of the brew packages
@@ -122,10 +118,12 @@ brew cask install minecraft
 brew cask install music-manager
 brew cask install openscad
 brew cask install paintbrush
+brew cask install pinentry-mac
 brew cask install quicksilver
 brew cask install second-life-viewer
 brew cask install sketchup
 brew cask install skype
+brew cask install slack
 brew cask install slic3r
 brew cask install smcfancontrol
 brew cask install sourcetree
