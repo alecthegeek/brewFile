@@ -1,3 +1,5 @@
+I don't use a Mac anymore so this project is archived
+
 brewFile
 ========
 
